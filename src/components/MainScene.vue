@@ -18,10 +18,10 @@ function onWindowResize(){
     if (renderer) {
 
       const canvas = renderer.domElement;
-      camera.aspect = canvas.width / canvas.height;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
       
-      renderer.setSize( canvas.width, canvas.height );
+      renderer.setSize( canvas.clientWidth, canvas.clientHeight, false);
   }
 
 }
@@ -66,7 +66,7 @@ animate();
 <template>
   <canvas 
     ref="container"
-    class="w-9/12 h-full"
+    class="w-full h-full"
     @mousedown="() => {}"
   />
 </template>
