@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/three": "^0.161.2",
+    "three": "^0.161.0",
     "vue": "^3.4.19"
   },
   "devDependencies": {
